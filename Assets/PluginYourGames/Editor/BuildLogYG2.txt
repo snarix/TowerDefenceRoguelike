@@ -1,0 +1,3 @@
+Build path: D:/ProjectUnity/TowerDefenceRoguelike/BuildWebGL/FinallyBuildForYG Ver16
+Build number: 16
+PluginYG version: 2.0032
