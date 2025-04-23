@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2539554691616997268}
-  - component: {fileID: 5126354675599288824}
-  m_Layer: 0
+  - component: {fileID: 300108827747464086}
+  - component: {fileID: 773950197055908368}
+  - component: {fileID: 4571848221541541039}
+  m_Layer: 7
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +35,7 @@ Transform:
   - {fileID: 1806231648185075486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 42.61, z: 0}
---- !u!114 &5126354675599288824
+--- !u!114 &300108827747464086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +44,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 2658034289753804752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1811c9efd7d2f1540925decbde9eacd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 17031e116808c58418a8dafb8093ee56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  _maxHealth: 150
+--- !u!114 &773950197055908368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658034289753804752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a26519504cc4359a6b39224edd21f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 300108827747464086}
+  _shooter: {fileID: 0}
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!65 &4571848221541541039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658034289753804752}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2912896, y: 2.6067042, z: 5.579179}
+  m_Center: {x: 0.015289189, y: 0.80335116, z: 0.030598521}
 --- !u!1001 &1810126498041995378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,6 +97,54 @@ PrefabInstance:
     - target: {fileID: 1364802344601326, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
       propertyPath: m_Name
       value: CarVisual
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364802344601326, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450049056625770, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462446582065014, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508255981079638, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548899860912900, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610185386056818, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690622342910214, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761976718908958, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882669638488190, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905258391716014, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917329904419148, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982055561728664, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4462267520477036, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
       propertyPath: m_LocalPosition.x

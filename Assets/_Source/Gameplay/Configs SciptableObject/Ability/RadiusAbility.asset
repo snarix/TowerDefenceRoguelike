@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7544f435ef304c0785b571f9819c78ca, type: 3}
+  m_Name: RadiusAbility
+  m_EditorClassIdentifier: 
+  _abilityType: 1
+  _abilityImage: {fileID: 5806690572610572727, guid: 5d91bc4613ca6cb4bb22648db33f4c74, type: 3}
+  value: 7
+  _cooldown: 15
+  _duration: 5

@@ -1,3 +1,5 @@
+using TowerDefenceRoguelike.Gameplay.Base.Abstractions;
+
 public class AttackView : IAttackable
 {
     private int _damage;

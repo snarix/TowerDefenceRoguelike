@@ -1,8 +1,11 @@
+using TowerDefenceRoguelike.Gameplay.Base.Abstractions;
 using UnityEngine;
 
 public class HPView : MonoBehaviour, IDamageable
 {
     [SerializeField] private float _health;
+
+    public Vector3 Position { get; }
 
     public void TakeDamage(int damage)
     {

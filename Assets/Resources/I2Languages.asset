@@ -1,0 +1,367 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Upgrade
+      TermType: 0
+      Description: 
+      Languages:
+      - Upgrades
+      - "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Play
+      TermType: 0
+      Description: 
+      Languages:
+      - Play
+      - "\u0418\u0433\u0440\u0430\u0442\u044C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Exit the Battle
+      TermType: 0
+      Description: 
+      Languages:
+      - Exit the Battle
+      - "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0431\u043E\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Are you sure you want to exit?
+      TermType: 0
+      Description: 
+      Languages:
+      - "Are you sure you \nwant to exit?"
+      - "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B, \n\u0447\u0442\u043E
+        \u0445\u043E\u0442\u0438\u0442\u0435 \u0432\u044B\u0439\u0442\u0438?"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Yes
+      TermType: 0
+      Description: 
+      Languages:
+      - Yes
+      - "\u0414\u0430"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: No
+      TermType: 0
+      Description: 
+      Languages:
+      - No
+      - "\u041D\u0435\u0442"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Game statistics
+      TermType: 0
+      Description: 
+      Languages:
+      - Game statistics
+      - "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 \u0438\u0433\u0440\u044B"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: 'You earned:'
+      TermType: 0
+      Description: 
+      Languages:
+      - 'You earned:'
+      - "\u0412\u044B \u0437\u0430\u0440\u0430\u0431\u043E\u0442\u0430\u043B\u0438:"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Retry
+      TermType: 0
+      Description: 
+      Languages:
+      - Retry
+      - "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: To Base
+      TermType: 0
+      Description: 
+      Languages:
+      - To base
+      - "\u041D\u0430 \u0431\u0430\u0437\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDamage1
+      TermType: 0
+      Description: 
+      Languages:
+      - Damage
+      - "\u0423\u0440\u043E\u043D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameRadius1
+      TermType: 0
+      Description: 
+      Languages:
+      - Radius
+      - "\u0414\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u0410\u0442\u0430\u043A\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameCooldown1
+      TermType: 0
+      Description: 
+      Languages:
+      - Attack Speed
+      - "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0410\u0442\u0430\u043A\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameHealthRegeneration1
+      TermType: 0
+      Description: 
+      Languages:
+      - Health Regeneration
+      - "\u0420\u0435\u0433\u0435\u043D\u0440\u0430\u0446\u0438\u044F HP"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameHealth1
+      TermType: 0
+      Description: 
+      Languages:
+      - Health
+      - "\u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDollarForWave1
+      TermType: 0
+      Description: 
+      Languages:
+      - Dollar For Wave
+      - "\u0414\u043E\u043B\u043B\u0430\u0440\u044B \u0417\u0430 \u0412\u043E\u043B\u043D\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameGoldForWave1
+      TermType: 0
+      Description: 
+      Languages:
+      - Gold For Wave
+      - "\u0413\u043E\u043B\u0434\u0430 \u0417\u0430 \u0412\u043E\u043B\u043D\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDollarForKilling1
+      TermType: 0
+      Description: 
+      Languages:
+      - Dollar For Killing
+      - "\u0414\u043E\u043B\u043B\u0430\u0440\u044B \u0417\u0430 \u0423\u0431\u0438\u0439\u0441\u0442\u0432\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameGoldForKilling1
+      TermType: 0
+      Description: 
+      Languages:
+      - Gold For Killing
+      - "\u0413\u043E\u043B\u0434\u0430 \u0417\u0430 \u0423\u0431\u0438\u0439\u0441\u0442\u0432\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDamageAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Devastating Damage
+      - "\u0420\u0430\u0437\u0440\u0443\u0448\u0430\u044E\u0449\u0438\u0439 \u0423\u0440\u043E\u043D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameRadiusAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Impact Radius
+      - "\u0420\u0430\u0434\u0438\u0443\u0441 \u041F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameCooldownAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Machine Gun Rhythm
+      - "\u041F\u0443\u043B\u0435\u043C\u0435\u0442\u043D\u044B\u0439 \u0420\u0438\u0442\u043C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameHealthAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Flesh of Steel
+      - "\u041F\u043B\u043E\u0442\u044C \u0438\u0437 \u0421\u0442\u0430\u043B\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameHealthRegenerationAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Desperate Recovery
+      - "\u041E\u0442\u0447\u0430\u044F\u043D\u043D\u043E\u0435 \u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDollarForWaveAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Despair Reward
+      - "\u041D\u0430\u0433\u0440\u0430\u0434\u0430 \u041E\u0442\u0447\u0430\u044F\u043D\u0438\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameGoldForWaveAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Wasteland Gold
+      - "\u0417\u043E\u043B\u043E\u0442\u043E \u041F\u0443\u0441\u0442\u043E\u0448\u0435\u0439"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameGoldForKillingAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Gold of the Dead
+      - "\u0417\u043E\u043B\u043E\u0442\u043E \u041C\u0435\u0440\u0442\u0432\u0435\u0446\u043E\u0432"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NameDollarForKillingAltName
+      TermType: 0
+      Description: 
+      Languages:
+      - Blood Money
+      - "\u041A\u0440\u043E\u0432\u0430\u0432\u044B\u0435 \u0414\u0435\u043D\u044C\u0433\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DamageDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - +{0} Damage
+      - "+{0} \u0423\u0440\u043E\u043D\u0430"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: CooldownDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - +{0} Attack Speed
+      - "+{0} \u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0410\u0442\u0430\u043A\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: RadiusDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - +{0} Radius
+      - "+{0} \u0414\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u0410\u0442\u0430\u043A\u0438"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HealthDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - +{0} Health
+      - "+{0} \u0417\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: HealthRegenerationDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - +{0} Health Regenration
+      - "+{0} \u0420\u0435\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u044F
+        HP"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DollarForWaveDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - x{0} Dollar For Wave
+      - "x{0} \u0414\u043E\u043B\u043B\u0430\u0440\u043E\u0432 \u0417\u0430 \u0412\u043E\u043B\u043D\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: GoldForWaveDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - x{0} Gold For Wave
+      - "x{0} \u0413\u043E\u043B\u0434\u044B \u0417\u0430 \u0412\u043E\u043B\u043D\u0443"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: DollarForKillingDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - x{0} Dollar For Killing
+      - "x{0} \u0414\u043E\u043B\u043B\u0430\u0440\u043E\u0432 \u0417\u0430 \u0423\u0431\u0438\u0439\u0441\u0442\u0432\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: GoldForKillingDesc
+      TermType: 0
+      Description: 
+      Languages:
+      - x{0} Gold For Killing
+      - "x{0} \u0413\u043E\u043B\u0434\u044B \u0417\u0430 \u0423\u0431\u0439\u0438\u0441\u0442\u0432\u043E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UiWave
+      TermType: 0
+      Description: 
+      Languages:
+      - Wave
+      - "\u0412\u043E\u043B\u043D\u0430"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Confirm
+      TermType: 0
+      Description: 
+      Languages:
+      - Confirm
+      - "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Reroll
+      TermType: 0
+      Description: 
+      Languages:
+      - Reroll
+      - "\u041F\u0435\u0440\u0435\u0432\u044B\u0431\u0440\u0430\u0442\u044C"
+      Flags: 0000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English (United States)
+      Code: en-US
+      Flags: 0
+    - Name: Russian
+      Code: ru
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: 
+    Google_SpreadsheetKey: 
+    Google_SpreadsheetName: 
+    Google_LastUpdatedVersion: 
+    Google_Password: change_this
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
