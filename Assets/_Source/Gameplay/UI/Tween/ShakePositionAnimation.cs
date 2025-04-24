@@ -12,7 +12,7 @@ namespace _Source.Gameplay.UI
         
         private bool _isLocked;
         
-        public bool Lock() => _isLocked = true;
+        public bool Lock() => _isLocked;
 
         public bool Unlock() => _isLocked = false;
         

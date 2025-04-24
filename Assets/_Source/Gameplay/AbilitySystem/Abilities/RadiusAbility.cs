@@ -11,10 +11,10 @@ namespace _Source.Gameplay.AbilitySystem.Abilities
     public class RadiusAbility : CooldownAbility, IDisposable
     {
         private PlayerStats _playerStats;
-        private float _value;
-        private float _duration;
         private ICoroutineHandler _coroutineHandler;
         private Coroutine _coroutine;
+        private float _value;
+        private float _duration;
 
         public RadiusAbility(AbilityData abilityData, float value, float cooldown, float duration,
             PlayerStats playerStats, ICoroutineHandler coroutineHandler) : base(abilityData, cooldown)

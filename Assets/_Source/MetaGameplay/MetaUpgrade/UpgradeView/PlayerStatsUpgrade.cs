@@ -6,7 +6,6 @@ using _Source.Gameplay.UI.BonusView;
 using Include;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Source.MetaGameplay.MetaUpgrade.UpgradeView
@@ -30,7 +29,7 @@ namespace _Source.MetaGameplay.MetaUpgrade.UpgradeView
         
         public void Initialize(BonusType bonusType, string bonusName, float currentValue, float nextValue, Image bonusIcon, int goldPrice, BonusData bonusData, PlayerStatsBonus statsBonus)
         {
-            _bonusType = bonusType;
+            BonusType = bonusType;
             
             _name.text = bonusName;
             _inititalValueStat.text = FormatValue(currentValue, bonusData);

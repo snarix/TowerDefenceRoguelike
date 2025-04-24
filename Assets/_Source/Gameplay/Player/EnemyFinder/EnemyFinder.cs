@@ -34,15 +34,6 @@ namespace TowerDefenceRoguelike.Gameplay.Player.EnemyFinder
             return nearestEnemy;
         }
 
-        /*public IDamageable FindNearestEnemy(Vector3 position, float radius)
-        {
-            var enemies = FindAllEnemies(position, radius);
-            if (enemies.Count > 0)
-                return enemies[0];
-            else
-                return null;
-        }*/
-
         public List<IDamageable> FindAllEnemies(Vector3 position, float radius)
         {
             Collider[] enemiesInRange = Physics.OverlapSphere(position, radius, _enemyLayer);

@@ -13,7 +13,7 @@ namespace TowerDefenceRoguelike.Gameplay.Player
             _value = value;
         }
 
-        [field: NonSerialized] public event Action<T> OnValueChanged;
+        public event Action<T> OnValueChanged;
 
         public T Value
         {

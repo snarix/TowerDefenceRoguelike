@@ -23,9 +23,7 @@ namespace _Source.MetaGameplay.Transition
         {
             var data = _saveLoadService.Load<MetaWallet>("WalletData");
             if (data == null)
-            {
                 return new MetaWallet(new Currency(_currencyValueConfig.Gold));
-            }
 
             return data;
         }

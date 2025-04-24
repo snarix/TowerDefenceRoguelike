@@ -8,7 +8,6 @@ using _Source.MetaGameplay.MetaUpgrade.UpgradeView;
 using _Source.MetaGameplay.Transition;
 using Include;
 using TowerDefenceRoguelike.Gameplay.Player;
-using UnityEngine;
 
 namespace _Source.MetaGameplay.MetaUpgrade
 {

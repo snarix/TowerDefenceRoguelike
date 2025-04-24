@@ -43,7 +43,6 @@ public class projectileActor : MonoBehaviour {
    // public ParticleSystem muzzleflare;
 
     //public bool swarmMissileLauncher = false;
-    private int _projectileSimFire = 1;
 
     public bool Torque = false;
     public float Tor_min, Tor_max;

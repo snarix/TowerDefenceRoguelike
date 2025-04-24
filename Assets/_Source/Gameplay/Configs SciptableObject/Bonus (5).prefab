@@ -444,9 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusButton: {fileID: 1862030726711214301}
-  _shakePosition: {fileID: 7371195623428523292}
-  _lockAnimationDuration: 0.4
-  _lockAnimationStrenght: 2
+  _shakeAnimation: {fileID: 7371195623428523292}
   _bonusIcon: {fileID: 3478746608549182999}
   _bonusNameText: {fileID: 8591896777389587011}
   _bonusDescriptionText: {fileID: 1518429901068623682}

@@ -41,7 +41,6 @@ namespace _Source.MetaGameplay
             
             if (ServiceLocator.HasService<MetaWallet>() == false)
             {
-                //_metaWallet = new MetaWallet(new Currency(_currencyValueConfig.Gold));
                 _metaWallet = _walletDataLoader.LoadWallet();
                 ServiceLocator.AddService(_metaWallet);
             }
@@ -91,7 +90,6 @@ namespace _Source.MetaGameplay
 
         private void OnPlayClicked()
         {
-            //_playerStatsDataLoader.SavePlayerStats(_playerStats);
             _scenesLoadingService.LoadWithData(SceneName.Gameplay, _playerStats);
         }
     }

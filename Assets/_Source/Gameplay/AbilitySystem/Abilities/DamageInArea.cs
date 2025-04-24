@@ -58,7 +58,7 @@ namespace _Source.Gameplay.AbilitySystem.Abilities
                 var enemiesInZone = _enemiesFinder.FindAllEnemies(zone, _radius);
                 foreach (var enemy in enemiesInZone)
                 {
-                    enemy.TakeDamage(_playerStats.Damage.Value * 2);
+                    enemy.TakeDamage(_playerStats.Damage.Value + _playerStats.Damage.Value);
                 }
                 SpawnedExplosion?.Invoke(zone);
                 _isInUse = false;

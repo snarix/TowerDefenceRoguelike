@@ -658,7 +658,7 @@ PlayerSettings:
     Stadia: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;TextMeshPro
     Standalone: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;TextMeshPro
     VisionOS: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;TextMeshPro
-    WebGL: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;RU_YG2;TextMeshPro
+    WebGL: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;RU_YG2;TextMeshPro;EnvirData_yg;Localization_yg;InterstitialAdv_yg
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2;TextMeshPro
     iPhone: DOTWEEN;TextMeshPro

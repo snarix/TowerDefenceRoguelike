@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class UIGradient : BaseMeshEffect
         if (!IsActive())
             return;
 
-        var vertexList = new System.Collections.Generic.List<UIVertex>();
+        var vertexList = new List<UIVertex>();
         vh.GetUIVertexStream(vertexList);
 
         int count = vertexList.Count;
@@ -21,8 +22,7 @@ public class UIGradient : BaseMeshEffect
 
         float topY = vertexList[0].position.y;
         float bottomY = vertexList[0].position.y;
-
-        // Находим верхнюю и нижнюю границы
+        
         for (int i = 1; i < count; i++)
         {
             float y = vertexList[i].position.y;
@@ -32,8 +32,7 @@ public class UIGradient : BaseMeshEffect
 
         float height = topY - bottomY;
         if (height <= 0) return;
-
-        // Применяем градиент
+        
         for (int i = 0; i < count; i++)
         {
             UIVertex vertex = vertexList[i];

@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using _Source.Gameplay.BonusSystem;
-using _Source.Gameplay.Currency;
 using _Source.Gameplay.UI;
 using Include;
-using TowerDefenceRoguelike.Gameplay.Enemy;
 using TowerDefenceRoguelike.Gameplay.Enemy.Factory;
 using UnityEngine;
 
@@ -37,7 +35,6 @@ namespace TowerDefenceRoguelike.Gameplay.Player
 
         public void StartWave()
         {
-            //_uiFacade.HideBonus();
             _enemySpawner.StartFirstWave();
             //_healthRegeneration.Activate();
         }
@@ -71,7 +68,7 @@ namespace TowerDefenceRoguelike.Gameplay.Player
         
         private void OnConfirmed()
         {
-            _coroutineHandler.StartCoroutine(StartNextWaveRoutine()); //?
+            _coroutineHandler.StartCoroutine(StartNextWaveRoutine());
             _testBonusApplier.HideConfirmReRollButton();
             _testBonusApplier.DestroyBonuses();
             _uiFacade.AbilityView.ShowPanelAbility();

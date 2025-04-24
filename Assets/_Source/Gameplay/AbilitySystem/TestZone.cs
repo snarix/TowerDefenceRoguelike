@@ -14,7 +14,7 @@ namespace _Source.Gameplay.AbilitySystem
                 {
                     GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     sphere.transform.position = center;
-                    sphere.transform.localScale = new Vector3(radius * 2, 0.1f, radius * 2); // Круглый "блин"
+                    sphere.transform.localScale = new Vector3(radius * 2, 0.1f, radius * 2);
                     Destroy(sphere, 1f);
                     Debug.Log("Центр зоны" + center);
                 }, 5f);

@@ -7,7 +7,7 @@ namespace _Source.Gameplay.UI.Ability
     [CreateAssetMenu(menuName = "ScriptableObject/Factory/AbilityButton", fileName = "AbilityButton")]
     public class AbilityButtonFactory : ScriptableObject, IAbilityViewFactory
     {
-        public class AbilityButtonVisitor : IAbilityVisitor
+        private class AbilityButtonVisitor : IAbilityVisitor
         {
             private CooldownAbilityButton _cooldownAbilityButton;
             private CountAbilityButton _countAbilityButton;

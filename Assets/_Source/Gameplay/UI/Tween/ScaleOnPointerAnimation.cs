@@ -17,7 +17,7 @@ namespace _Source.Gameplay.UI
             _scaleTween?.Kill();
             _scaleTween = transform.DOScale(_increaseScale, _scaleDuration);
             
-            if (CanSetAsLastSibling())
+            if (IsSetAsLastSibling())
                 _scaleTween.OnStart(() => transform.SetAsLastSibling());
         }
 
@@ -26,7 +26,7 @@ namespace _Source.Gameplay.UI
             _scaleTween?.Kill();
             _scaleTween = transform.DOScale(_defaultScale, _scaleDuration);
             
-            if (CanSetAsFirstSibling())
+            if (IsSetAsFirstSibling())
                 _scaleTween.OnComplete(() => transform.SetAsFirstSibling());
         }
 
@@ -35,7 +35,7 @@ namespace _Source.Gameplay.UI
             _scaleTween?.Kill();
         }
         
-        protected virtual bool CanSetAsFirstSibling() => false;
-        protected virtual bool CanSetAsLastSibling() => false;
+        protected virtual bool IsSetAsFirstSibling() => false;
+        protected virtual bool IsSetAsLastSibling() => false;
     }
 }

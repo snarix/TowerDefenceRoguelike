@@ -39,6 +39,5 @@ namespace _Source.Gameplay.Currency
         {
             return _value >= amount;
         }
-
     }
 }

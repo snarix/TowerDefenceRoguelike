@@ -3,6 +3,7 @@ using _Source.Gameplay.UI;
 using _Source.MetaGameplay.MetaUpgrade.UpgradeView;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace _Source.MetaGameplay
 {
@@ -50,8 +51,12 @@ namespace _Source.MetaGameplay
             _activateUpgradeButton.onClick.RemoveListener(Upgrade);
             _activateShopButton.onClick.RemoveListener(Shop);
         }
-        
-        private void Transition() => PlayClicked?.Invoke();
+
+        private void Transition()
+        {
+            YG2.InterstitialAdvShow();
+            PlayClicked?.Invoke();
+        } 
         
         private void StartGame()
         {

@@ -19,12 +19,7 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy.StateMachine
             if (_enemy.HealthView is ImageHealthView imageHealthView)
                 imageHealthView.FadeImage();
             
-            Object.Destroy(_enemy.gameObject, 3f);
-        }
-
-        private void AnimationHandlerOnDeathFinished()
-        {
-            _enemy.AnimationHandler.DeathFinished -= AnimationHandlerOnDeathFinished;
+            Object.Destroy(_enemy.gameObject, _enemy.DestructionDelay);
         }
 
         public override void Update()

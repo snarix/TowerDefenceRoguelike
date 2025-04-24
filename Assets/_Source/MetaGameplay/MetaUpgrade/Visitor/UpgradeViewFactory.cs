@@ -24,6 +24,7 @@ namespace _Source.MetaGameplay.MetaUpgrade.Visitor
             public void Visit(PlayerStatsBonus bonus)
             {
                 var upgrade = Instantiate(_upgrade, _parentTransform);
+                
                 upgrade.Initialize(bonus.BonusData.BonusType, 
                     bonus.BonusData.BonusAlternativeName,
                     bonus.GetCurrentValue(), 

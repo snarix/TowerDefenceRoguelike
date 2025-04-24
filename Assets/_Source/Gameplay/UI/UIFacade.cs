@@ -74,7 +74,7 @@ namespace _Source.Gameplay.UI
             _playerStatsTextView.UpdateDamageText(playerStats.Damage.Value);
             _playerStatsTextView.UpdateHealthRegenerationText(playerStats.HealthRegeneration.Value);
             player.HealthRegenerationValueChanged += OnHealthRegenerationValueChanged;
-            player.Shooter.DamageValueChanged += OnDamageValueChanged;
+            player.DamageValueChanged += OnDamageValueChanged;
 
             _exitButton.onClick.AddListener(OnExitClicked);
             
@@ -93,7 +93,7 @@ namespace _Source.Gameplay.UI
             _exitButton.onClick.RemoveListener(OnExitClicked);
             
             _player.HealthRegenerationValueChanged += OnHealthRegenerationValueChanged;
-            _player.Shooter.DamageValueChanged += OnDamageValueChanged;
+            _player.DamageValueChanged += OnDamageValueChanged;
             
             _exitPanelView.YesClicked -= OnYesClicked;
             _exitPanelView.NoClicked -= OnNoClicked;

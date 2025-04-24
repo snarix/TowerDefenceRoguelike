@@ -893,9 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bonusButton: {fileID: 1563931533130004281}
-  _shakePosition: {fileID: 227829373839715510}
-  _lockAnimationDuration: 0.4
-  _lockAnimationStrenght: 2
+  _shakeAnimation: {fileID: 227829373839715510}
   _image: {fileID: 95632534474053505}
   _name: {fileID: 2684753588670921820}
   _inititalValueStat: {fileID: 7775561203515736047}

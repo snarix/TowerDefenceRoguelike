@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Source.Gameplay.Currency;
 using Include;
 using TowerDefenceRoguelike.Gameplay.Base;
 using UnityEngine;
@@ -23,14 +22,12 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy.Factory
         
         public event Action<int> EnemySpawned; 
         public event Action<int> EnemyHealthUpdated;
+        public event Action<int> EnemyAmountUpdated;
         
         public event Action<Enemy> EnemyDied;
-        public event Action<int> EnemyAmountUpdated;
 
         public event Action<Wave, int> WaveStarted;
         public event Action<Wave> WaveFinished;
-
-        public event Action<int> CurrentWaveIndexChanged;
 
         private bool IsWavesEnded => _currentWaveIndex >= _spawnData.Waves.Count;
 
@@ -110,7 +107,6 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy.Factory
                 WaveFinished?.Invoke(_spawnData.Waves[_currentWaveIndex]);
                 
                 _currentWaveIndex++;
-                CurrentWaveIndexChanged?.Invoke(_currentWaveIndex);
             }
         }
 

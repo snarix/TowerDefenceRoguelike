@@ -10,13 +10,11 @@ namespace _Source.Gameplay.UI.BonusView
     public abstract class BonusView : MonoBehaviour
     {
         [SerializeField] protected Button _bonusButton;
-        [SerializeField] protected ShakePositionAnimation _shakePosition;
         [SerializeField] private float _lockAnimationDuration = 0.4f;
         [SerializeField] private float _lockAnimationStrenght = 2f;
+        
         private bool _isLocked;
-
-        protected BonusType _bonusType;
-        public BonusType BonusType => _bonusType;
+        public BonusType BonusType { get; protected set; }
 
         public event Action<BonusType> BonusApplied;
         
@@ -37,8 +35,8 @@ namespace _Source.Gameplay.UI.BonusView
                 transform.DOShakePosition(_lockAnimationDuration, _lockAnimationStrenght);
                 return;
             }
-
-            BonusApplied?.Invoke(_bonusType);
+            
+            BonusApplied?.Invoke(BonusType);
         }
 
         protected string FormatValue(float value, BonusData bonus)

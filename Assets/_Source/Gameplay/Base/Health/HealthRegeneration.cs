@@ -27,7 +27,7 @@ namespace TowerDefenceRoguelike.Gameplay.Base
             _health.Died += OnHealthDied;
         }
 
-        public void Deactivate()
+        private void Deactivate()
         {
             _coroutineHandler.StopCoroutine(_coroutine);
             Debug.Log("Health Regeneration deactivated");

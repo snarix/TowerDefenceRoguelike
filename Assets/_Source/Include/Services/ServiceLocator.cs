@@ -29,6 +29,6 @@ namespace Include
             return (T)_services[typeof(T)];
         }
 
-        public static bool HasService<T>() => _services.ContainsKey(typeof(T)); //xD?? 
+        public static bool HasService<T>() => _services.ContainsKey(typeof(T));
     }
 }

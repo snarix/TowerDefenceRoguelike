@@ -30,8 +30,7 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy
         public EnemyMover Mover => _mover;
         public EnemyAttacker Attacker => _attacker;
         public EnemyAnimator Animator => _animator;
-
-        public Health Health => _health;
+        
         public Collider Collider => _collider;
 
         public Health AttackTarget => _attackTarget;
@@ -42,9 +41,9 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy
 
         public EnemyAnimationEventsHandler AnimationHandler => _animationHandler;
 
-        public EnemyStats Stats => _stats;
-
         public EnemyType Type => _type;
+
+        public float DestructionDelay => 3f;
 
         public event Action<Enemy> Died;
         public event Action<int> EnemyHealthUpdated;

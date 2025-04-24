@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace _Source.Gameplay.UI
 {
@@ -51,9 +52,17 @@ namespace _Source.Gameplay.UI
         private void YesClick() => YesClicked?.Invoke();
         
         private void NoClick() => NoClicked?.Invoke();
-        
-        private void RetryClick() => RetryClicked?.Invoke();
 
-        private void ToBaseClick() => ToBaseClicked?.Invoke();
+        private void RetryClick()
+        {
+            YG2.InterstitialAdvShow();
+            RetryClicked?.Invoke();
+        }
+
+        private void ToBaseClick()
+        {
+            YG2.InterstitialAdvShow();
+            ToBaseClicked?.Invoke();
+        } 
     }
 }

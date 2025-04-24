@@ -8,6 +8,7 @@ namespace TowerDefenceRoguelike.Gameplay.Enemy.StateMachine
 
         public override void Enter()
         {
+            _enemy.Mover.Initialize();
             _enemy.Animator.SetMove(true);
         }
 

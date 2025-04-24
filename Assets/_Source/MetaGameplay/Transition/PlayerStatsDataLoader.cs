@@ -24,9 +24,7 @@ namespace _Source.MetaGameplay.Transition
             var saveData = _saveLoadService.Load<PlayerStats>("PlayerData");
             
             if (saveData == null)
-            {
                 return _config.GetPlayerStats();
-            }
             
             return saveData;
         }

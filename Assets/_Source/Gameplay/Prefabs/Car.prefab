@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2539554691616997268}
   - component: {fileID: 300108827747464086}
   - component: {fileID: 773950197055908368}
+  - component: {fileID: 8391576848471672948}
   - component: {fileID: 4571848221541541039}
   m_Layer: 7
   m_Name: Car
@@ -65,6 +66,23 @@ MonoBehaviour:
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  _playerExplosionFxView: {fileID: 8391576848471672948}
+--- !u!114 &8391576848471672948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658034289753804752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af34fc8b2ab45278b3f22b607ddd419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionFX: {fileID: 3772907998948173600, guid: d3354b790a1ce4f418fe5fbd2c895a48, type: 3}
+  _carVisual: {fileID: 1822297752819467624}
+  _fadeAnimation: {fileID: 0}
+  _explosionRadiusMultiplier: 7
 --- !u!65 &4571848221541541039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84,8 +102,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.2912896, y: 2.6067042, z: 5.579179}
-  m_Center: {x: 0.015289189, y: 0.80335116, z: 0.030598521}
+  m_Size: {x: 2.2817845, y: 2.983288, z: 5.453126}
+  m_Center: {x: 0.038501147, y: 0.9916431, z: 0.07051301}
 --- !u!1001 &1810126498041995378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,5 +214,10 @@ PrefabInstance:
 --- !u!4 &1806231648185075486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4462267520477036, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
+  m_PrefabInstance: {fileID: 1810126498041995378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1822297752819467624 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23861958190867738, guid: 0ecf00181b469b2438043da6adbb8de7, type: 3}
   m_PrefabInstance: {fileID: 1810126498041995378}
   m_PrefabAsset: {fileID: 0}

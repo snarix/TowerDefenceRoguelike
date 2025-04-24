@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using _Source.Gameplay.UI;
 using Include;
 using TowerDefenceRoguelike.Gameplay.Base;
+using TowerDefenceRoguelike.Gameplay.Player.Abstractions;
 using UnityEngine;
 
 namespace TowerDefenceRoguelike.Gameplay.Player
@@ -13,57 +12,53 @@ namespace TowerDefenceRoguelike.Gameplay.Player
         [SerializeField] private Health _health;
         [SerializeField] private Shooter _shooter;
         [SerializeField] private LayerMask _enemyLayer;
-        [SerializeField] private ParticleSystem _explosionFX;
-        [SerializeField] private MeshRenderer _carVisual;
-        [SerializeField] private float _explosionRadiusMultiplier = 7f;
-        [SerializeField] private FadeAnimation _fadeAnimation;
+        [SerializeField] private PlayerExplosionFxView _playerExplosionFxView;
 
         private PlayerStats _playerStats;
-        private EnemyFinder.EnemyFinder _enemyFinder;
+        private IEnemyFinder _enemyFinder;
         private HealthRegeneration _healthRegeneration;
+        private MultiplierConfig _multiplierConfig;
         private List<IDisposable> _disposables = new List<IDisposable>();
 
         public Health Health => _health;
-
-        public HealthRegeneration HealthRegeneration => _healthRegeneration;
 
         public Shooter Shooter => _shooter;
 
         public event Action Died;
         public event Action<float> HealthRegenerationValueChanged; 
+        public event Action<int> DamageValueChanged; 
 
-        public void Initialize(PlayerStats playerStats)
+        public void Initialize(PlayerStats playerStats, MultiplierConfig config)
         {
             _playerStats = playerStats;
-
+            _multiplierConfig = config;
+            
             _enemyFinder = new EnemyFinder.EnemyFinder(_enemyLayer);
             _shooter.Initialize(_enemyFinder, playerStats);
+            _playerExplosionFxView.Initialize(this);
 
             var coroutineHandler = new MonoBehaviourCoroutineHandler(this);
             _healthRegeneration = new HealthRegeneration(_health, coroutineHandler);
 
             _health.SetMaxHealth(_playerStats.MaxHealth.Value);
-            //_healthRegeneration.Activate(_playerStats.HealthRegeneration.Value);
 
             _disposables.Add(_healthRegeneration);
-
+            
             _playerStats.MaxHealth.OnValueChanged += OnMaxHealthValueChanged;
             _playerStats.HealthRegeneration.OnValueChanged += OnHealthRegenerationValueChanged;
+            _playerStats.Damage.OnValueChanged += DamageOnValueChanged;
             _health.Died += OnHealthDied;
-            _health.Damaged += OnDamaged;
         }
 
         private void OnDestroy()
         {
             _playerStats.MaxHealth.OnValueChanged -= OnMaxHealthValueChanged;
             _playerStats.HealthRegeneration.OnValueChanged -= OnHealthRegenerationValueChanged;
+            _playerStats.Damage.OnValueChanged -= DamageOnValueChanged;
             _health.Died -= OnHealthDied;
-            _health.Damaged -= OnDamaged;
 
             foreach (var disposable in _disposables)
-            {
                 disposable.Dispose();
-            }
         }
 
         private void OnMaxHealthValueChanged(int maxHealth)
@@ -71,50 +66,31 @@ namespace TowerDefenceRoguelike.Gameplay.Player
             _health.SetMaxHealth(maxHealth);
         }
 
-        private void OnHealthRegenerationValueChanged(float healthRegeneration) //?
+        private void OnHealthRegenerationValueChanged(float healthRegeneration)
         {
             _healthRegeneration.Activate(_playerStats.HealthRegeneration.Value);
             HealthRegenerationValueChanged?.Invoke(healthRegeneration);
-            //_health.Heal(healthRegeneration);
         }
         
-        private void OnDamaged(int damage)
+        private void DamageOnValueChanged(int damage)
         {
-            _fadeAnimation.CreateVignette();
+            DamageValueChanged?.Invoke(damage);
         }
         
         private void OnHealthDied(Health health)
         {
-            var boomFx = Instantiate(_explosionFX, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
-            boomFx.Play();
-            
             EnemiesTakeDamageInRadiusExplosion();
-            
-            _carVisual.gameObject.SetActive(false);
-            _shooter.gameObject.SetActive(false);
-            
-            StartCoroutine(WaitForExplosion());
-            
+            Died?.Invoke();
             health.Died -= OnHealthDied;
         }
 
         private void EnemiesTakeDamageInRadiusExplosion()
         {
-            ParticleSystem.ShapeModule shapeModule = _explosionFX.shape;
-            float radius = shapeModule.radius * _explosionRadiusMultiplier;
+            float radius = _playerExplosionFxView.GetExplosionRadius();
             var nearestEnemies = _enemyFinder.FindAllEnemies(transform.position, radius);
+            
             foreach (var enemy in nearestEnemies)
-            {
-                enemy.TakeDamage(_playerStats.Damage.Value * 3);
-            }
-        }
-
-        private IEnumerator WaitForExplosion()
-        {
-            yield return new WaitForSeconds(_explosionFX.main.duration);
-
-            gameObject.SetActive(false);
-            Died?.Invoke();
+                enemy.TakeDamage(_playerStats.Damage.Value * _multiplierConfig.Multiplier);
         }
     }
 }

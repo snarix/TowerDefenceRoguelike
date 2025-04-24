@@ -7,7 +7,6 @@ using _Source.Gameplay.Currency;
 using _Source.Gameplay.UI;
 using _Source.Gameplay.UI.BonusView;
 using _Source.MetaGameplay.MetaUpgrade;
-using _Source.MetaGameplay.Transition;
 using Include;
 using TowerDefenceRoguelike.Gameplay.Player;
 using Random = UnityEngine.Random;
@@ -36,13 +35,24 @@ namespace _Source.Gameplay.BonusSystem
         
         public event Action Confirmed;
 
-        public void Dispose() => _bonusApplierView.BonusApplied -= OnBonusApplied;
+        public void Dispose()
+        {
+            _bonusApplierView.BonusApplied -= OnBonusApplied;
+            _bonusApplierView.ReRolled -= OnReRolled;
+            _bonusApplierView.Confirmed -= OnConfirmed;
+        } 
 
         public void ShowBonuses()
         {
-            var randomBonuses = GetRandomBonus();
+            var randomBonuses = _bonuses.OrderBy(x => Random.Range(0, _bonuses.Count)).Take(3).ToList();
             _bonusApplierView.ShowBonuses(randomBonuses);
         }
+        
+        public void DestroyBonuses() => _bonusApplierView.DestroyBonuses();
+        
+        public void ShowConfirmReRollButton() => _bonusApplierView.ShowConfirmReRollButton();
+
+        public void HideConfirmReRollButton() => _bonusApplierView.HideConfirmReRollButton();
         
         private void OnReRolled(ShakePositionAnimation shakePositionAnimation)
         {
@@ -76,14 +86,6 @@ namespace _Source.Gameplay.BonusSystem
                 _bonusApplierView.MakeBonusVoid(bonusType);
             }
         }
-        
-        public void DestroyBonuses() => _bonusApplierView.DestroyBonuses();
-        
-        public void ShowConfirmReRollButton() => _bonusApplierView.ShowConfirmReRollButton();
-
-        public void HideConfirmReRollButton() => _bonusApplierView.HideConfirmReRollButton();
-        
-        private List<IBonus> GetRandomBonus() => _bonuses.OrderBy(x => Random.Range(0, _bonuses.Count)).Take(3).ToList();
         
         private void OnConfirmed() => Confirmed?.Invoke();
     }

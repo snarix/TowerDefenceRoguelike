@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using _Source.Gameplay.Currency;
-using _Source.Gameplay.UI;
 using TowerDefenceRoguelike.Gameplay.Enemy.Factory;
 using UnityEngine;
 
@@ -13,10 +11,8 @@ namespace TowerDefenceRoguelike.Gameplay.Player
         private EnemySpawner _enemySpawner;
         private GameplayWallet _gameplayWallet;
         private PlayerStats _playerStats;
-        //private EnemyRewardPanel _enemyRewardPanel;
         
         public event Action<float, float> RewardedForWave;
-        public event Action<float, float> RewardedForDie;
 
         public RewardGiver(EnemySpawner enemySpawner, GameplayWallet gameplayWallet, RewardConfig rewardConfig, PlayerStats playerStats)
         {
@@ -58,10 +54,6 @@ namespace TowerDefenceRoguelike.Gameplay.Player
             
             _gameplayWallet.Dollar.Add(dollarReward);
             _gameplayWallet.Gold.Add(goldReward);
-            
-            RewardedForDie?.Invoke(dollarReward, goldReward);
-            
-            //_enemyRewardPanel.ShowReward(this, goldReward, dollarReward);
         }
     }
 }

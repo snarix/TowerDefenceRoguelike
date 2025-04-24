@@ -2,7 +2,7 @@ namespace _Source.Gameplay.UI
 {
     public class ScaleOnPointerWithSibling : ScaleOnPointerAnimation
     {
-        protected override bool CanSetAsFirstSibling() => true;
-        protected override bool CanSetAsLastSibling() => true;
+        protected override bool IsSetAsFirstSibling() => true;
+        protected override bool IsSetAsLastSibling() => true;
     }
 }

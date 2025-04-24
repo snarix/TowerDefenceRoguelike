@@ -1,6 +1,5 @@
 using System;
 using TowerDefenceRoguelike.Gameplay.Base;
-using TowerDefenceRoguelike.Gameplay.Player;
 using UnityEngine;
 
 namespace TowerDefenceRoguelike.Gameplay.Enemy

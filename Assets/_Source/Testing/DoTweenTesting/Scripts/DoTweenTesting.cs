@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -36,7 +34,6 @@ public class DoTweenTesting : MonoBehaviour
     {
         _sequence?.Kill();
     }
-    
 }
 
 public static class CollectionExtension

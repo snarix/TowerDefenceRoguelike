@@ -1,6 +1,4 @@
-using System;
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using Sequence = DG.Tweening.Sequence;
 
@@ -20,11 +18,6 @@ namespace _Source.Gameplay.UI
         private void OnDestroy()
         {
             _sequence?.Kill();
-        }
-
-        public void Show()
-        {
-            
         }
 
         public void CreateVignette()

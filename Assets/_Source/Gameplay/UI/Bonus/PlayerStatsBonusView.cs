@@ -43,7 +43,7 @@ namespace _Source.Gameplay.UI.BonusView
         public void Initialize(BonusType bonusType, string bonusName, string bonusDescription, float currentValue,
             float nextValue, Image bonusIcon, int dollarPrice, BonusData bonusData, PlayerStatsBonus statsBonus)
         {
-            _bonusType = bonusType;
+            BonusType = bonusType;
 
             _bonusNameText.text = bonusName;
             _bonusDescriptionText.text = bonusDescription;
